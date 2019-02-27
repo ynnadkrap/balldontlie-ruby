@@ -3,7 +3,7 @@ describe 'MockResource with List and Retrieve' do
     Class.new do
       extend Balldontlie::Operations::List
       extend Balldontlie::Operations::Retrieve
-      extend Balldontlie::Request
+      include Balldontlie::Request
 
       def self.resource_url
         '/dummy_resource'
@@ -29,7 +29,7 @@ describe 'MockResource with List and Retrieve' do
     let(:expected_url) { '/dummy_resource' }
 
     it 'performs the correct request' do
-      expect(klass.list(params)).to eq({})
+      expect(klass.list(params)).to be_an_instance_of(Balldontlie::List)
     end
   end
 

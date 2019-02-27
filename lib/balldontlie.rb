@@ -1,11 +1,13 @@
 require 'faraday'
 require 'json'
 
-require 'balldontlie/request'
-require 'balldontlie/base_resource'
-require 'balldontlie/operations/list'
-require 'balldontlie/operations/retrieve'
-require 'balldontlie/team'
+require_relative 'balldontlie/request'
+require_relative 'balldontlie/base_object'
+require_relative 'balldontlie/operations/list'
+require_relative 'balldontlie/operations/retrieve'
+require_relative 'balldontlie/team'
+require_relative 'balldontlie/stat'
+require_relative 'balldontlie/list'
 
 module Balldontlie
   class << self

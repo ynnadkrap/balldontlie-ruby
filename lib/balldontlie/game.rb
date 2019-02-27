@@ -1,5 +1,5 @@
 module Balldontlie
-  class Game < BaseResource
+  class Game < BaseObject
     extend Balldontlie::Operations::List
     extend Balldontlie::Operations::Retrieve
 
